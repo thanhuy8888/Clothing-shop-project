@@ -40,7 +40,7 @@ $result = $conn->query("SELECT id, name, email, role FROM users ORDER BY id DESC
     </style>
 </head>
 <body>
-    <h1>Quản Lý Quyền User</h1>
+    <h1>User Role Management</h1>
     
     <div class="warning">
         <strong>⚠️ QUAN TRỌNG:</strong> File này cho phép thay đổi quyền Admin. <br>
@@ -90,3 +90,4 @@ $result = $conn->query("SELECT id, name, email, role FROM users ORDER BY id DESC
     </table>
 </body>
 </html>
+
