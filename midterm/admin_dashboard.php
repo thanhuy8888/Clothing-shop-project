@@ -34,10 +34,26 @@ $recent_orders_query = "
 ";
 $recent_orders = $conn->query($recent_orders_query);
 
-include 'includes/header.php';
+// Don't include standard header, use custom admin layout
+// include 'includes/header.php'; 
 ?>
 
-<div class="container" style="padding: 40px 20px;">
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Admin Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="public/styles.css">
+</head>
+<body class="admin-page">
+
+<?php include 'includes/admin_sidebar.php'; ?>
+
+<div class="admin-main">
+    <div class="container-fluid">
     <!-- Dashboard Header -->
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
         <div>
@@ -200,4 +216,9 @@ include 'includes/header.php';
     </div>
 </div>
 
-<?php include 'includes/footer.php'; ?>
+    </div>
+</div>
+
+<script src="public/script.js"></script>
+</body>
+</html>

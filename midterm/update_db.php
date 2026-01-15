@@ -19,5 +19,20 @@ if ($check->num_rows === 0) {
 $admin_email = 'admin@example.com'; 
 $conn->query("UPDATE users SET role='admin' WHERE email='$admin_email'");
 
+
+// Add approval_status column if it doesn't exist
+$check_approval = $conn->query("SHOW COLUMNS FROM products LIKE 'approval_status'");
+if ($check_approval->num_rows === 0) {
+    $sql = "ALTER TABLE products ADD COLUMN approval_status ENUM('pending', 'approved', 'rejected') DEFAULT 'pending'";
+    if ($conn->query($sql) === TRUE) {
+        echo "Column 'approval_status' added successfully.<br>";
+    } else {
+        echo "Error adding column 'approval_status': " . $conn->error . "<br>";
+    }
+} else {
+    echo "Column 'approval_status' already exists.<br>";
+}
+
 echo "Database update complete.";
 ?>
+
