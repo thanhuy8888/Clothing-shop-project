@@ -139,4 +139,7 @@ $new = $conn->query("SELECT id, name, price, sale_price, image_url, category, su
 
 </div>
 
+
+<!-- Deploy Test: <?php echo date('Y-m-d H:i:s'); ?> -->
 <?php include 'includes/footer.php'; ?>
+
