@@ -19,7 +19,7 @@
         <a href="admin_products.php?status=pending" class="menu-item <?php echo (isset($_GET['status']) && $_GET['status'] == 'pending') ? 'active' : ''; ?>">
             <i class="fas fa-clock"></i> Mới gửi <span class="badge-count pending-count-badge">Wait</span>
         </a>
-        <a href="admin_products.php?status=approved" class="menu-item <?php echo (isset($_GET['status']) && $_GET['status'] == 'approved') ? 'active' : ''; ?>">
+        <a href="approved.php" class="menu-item <?php echo basename($_SERVER['PHP_SELF']) == 'approved.php' ? 'active' : ''; ?>">
             <i class="fas fa-check-circle"></i> Đã duyệt
         </a>
 
