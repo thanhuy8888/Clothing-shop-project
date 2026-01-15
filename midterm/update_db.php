@@ -33,6 +33,6 @@ if ($check_approval->num_rows === 0) {
     echo "Column 'approval_status' already exists.<br>";
 }
 
-echo "Database update complete.";
+echo "<div style='color:green; font-weight:bold; padding:20px;'>Database update complete! Column 'approval_status' added. <br><a href='admin_products.php'>Go to Admin Products</a></div>";
+// Delete self for security? Maybe not yet.
 ?>
-
