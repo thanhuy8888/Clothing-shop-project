@@ -16,12 +16,7 @@
         <a href="admin_products.php" class="menu-item <?php echo (basename($_SERVER['PHP_SELF']) == 'admin_products.php' && !isset($_GET['status'])) ? 'active' : ''; ?>">
             <i class="fas fa-box"></i> Tất cả ý tưởng
         </a>
-        <a href="admin_products.php?status=pending" class="menu-item <?php echo (isset($_GET['status']) && $_GET['status'] == 'pending') ? 'active' : ''; ?>">
-            <i class="fas fa-clock"></i> Mới gửi <span class="badge-count pending-count-badge">Wait</span>
-        </a>
-        <a href="approved.php" class="menu-item <?php echo basename($_SERVER['PHP_SELF']) == 'approved.php' ? 'active' : ''; ?>">
-            <i class="fas fa-check-circle"></i> Đã duyệt
-        </a>
+
 
         <div class="menu-label">HỆ THỐNG</div>
         <a href="admin_users.php" class="menu-item <?php echo basename($_SERVER['PHP_SELF']) == 'admin_users.php' ? 'active' : ''; ?>">
